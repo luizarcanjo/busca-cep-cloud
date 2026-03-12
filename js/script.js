@@ -26,8 +26,15 @@ function mostrarRua(){
 	cidade = $("#cidade-rua").val()
 	rua = $("#rua-rua").val()
 
+		url = `https://viacep.com.br/ws/${uf}/${cidade}/${rua}/json/` // url do viacep
 
-	console.log("dados", uf, cidade, rua)
-
-
+	fetch(url)
+		.then((res) => { // variavel "res" irá armazenar a resposta inicial
+			return res.json() // convertendo a resposta em JSON
+		})
+		.then((ruas) => { // variavel "cep" contendo o json com o CEP do viacep
+			console.log("AQUI AS RUAS", ruas) // imprimindo os dados do cep
+		})
 }
+
+
