@@ -17,6 +17,17 @@ function mostrar(){
 			M.updateTextFields()
 		})
 	// FIM DA IMPLEMENTAÇÃO DO FETCH
-	console.log("Oi, meu CEP É fora", cep)
+	// console.log("Oi, meu CEP É fora", cep)
 }
 // tag fechamento do script JS
+
+function mostrarRua(){
+	uf = $("#uf-rua").val()
+	cidade = $("#cidade-rua").val()
+	rua = $("#rua-rua").val()
+
+
+	console.log("dados", uf, cidade, rua)
+
+
+}
